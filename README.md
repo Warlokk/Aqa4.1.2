@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/ldhwa4e5l9n5isfc?svg=true)](https://ci.appveyor.com/project/Warlokk/aqa2-3-1)
