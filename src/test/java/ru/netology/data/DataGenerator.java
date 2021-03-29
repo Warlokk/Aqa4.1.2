@@ -10,16 +10,17 @@ public class DataGenerator {
     }
 
     public static class DeliveryRequest {
-        private DeliveryRequest() {
+        public DeliveryRequest() {
         }
 
         public static DeliveryInfo clientInfo(String locale) {
-            Faker faker = new Faker(new Locale("ru"));
+            Faker faker = new Faker(new Locale(locale));
             return new DeliveryInfo(
-                    faker.name().fullName(),
+                    faker.name().lastName().replace("ё", "е") + " " + faker.name().firstName().replace("ё", "е"),
                     faker.address().city(),
                     faker.phoneNumber().phoneNumber()
             );
         }
     }
+
 }
